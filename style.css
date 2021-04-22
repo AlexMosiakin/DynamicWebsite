@@ -16,13 +16,12 @@ main {
 }
 
 #logo {
-    color: #fff;
+    color: white;
     font-family: "Abril Fatface";
-    font-weight: 300;
 }
 
 .nav-header {
-    min-width: 10vh;
+    min-height: 10vh;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -30,7 +29,7 @@ main {
     color: white;
     width: 80%;
     margin: auto;
-    padding: 2rem 0;
+    padding: 2rem 0rem;
     z-index: 2;
     position: relative;
 }
@@ -94,13 +93,12 @@ main {
 .hero-desc h2 {
     font-family: "Abril Fatface";
     font-size: 5rem;
-    font-weight: 300;
 }
 
 .hero-desc p {
     padding: 3rem 0rem;
     font-size: 1.5rem;
-    color: rgb(233, 233, 233);
+    color: rgb(223, 223, 223);
 }
 
 .explore {
@@ -142,7 +140,6 @@ main {
 
 .nav-links h3 {
     padding: 3rem 0rem;
-    font-weight: 500;
 }
 
 .contact {
@@ -152,7 +149,6 @@ main {
 .contact h2 {
     font-size: 3rem;
     padding: 2rem 0rem;
-    font-weight: 500;
 }
 
 .contact p {
@@ -178,7 +174,7 @@ main {
     position: absolute;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
     transition-property: background, transform;
     transform-origin: 75% 75%;
 }
@@ -212,9 +208,8 @@ main {
     top: 0;
     left: 0;
     position: absolute;
-    background: lightblue;
     mix-blend-mode: darken;
-    transform: translateY(50%);
+    transform: translateY(100%);
 }
 
 .t-swipe1 {
@@ -238,7 +233,7 @@ body.hide {
 }
 
 
-/* Other pages */
+/* Other Pages */
 
 .fashion1,
 .fashion2,
@@ -315,12 +310,94 @@ body.hide {
 
 .swipe1 {
     background: rgb(167, 110, 231);
+    z-index: 5;
 }
 
 .swipe2 {
     background: rgb(86, 124, 228);
+    z-index: 4;
 }
 
 .swipe3 {
     background: rgb(255, 139, 93);
+    z-index: 3;
+}
+
+@media screen and (max-width: 1500px) {
+    .hero-img {
+        height: 50vh;
+    }
+    .fashion-text h1 {
+        font-size: 2rem;
+        padding: 1rem 0rem;
+    }
+    .fashion-text p {
+        font-size: 1.2rem;
+    }
+    .fashion-img img {
+        height: 50vh;
+        object-position: top;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        width: 100%;
+        margin: 0;
+    }
+    .slide {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .hero-desc {
+        padding: 0;
+    }
+    .hero-img {
+        padding-top: 4rem;
+    }
+    .hero-desc h2 {
+        font-size: 1.6rem;
+        padding: 1rem 0rem;
+    }
+    .hero-desc p {
+        padding: 2rem 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+    .explore {
+        width: 60%;
+        margin: auto;
+    }
+    .detail-slide {
+        width: 100%;
+        text-align: center;
+    }
+    .fashion-text p {
+        margin-bottom: 5rem;
+        padding: 0;
+    }
+    .fastion-text h1 {
+        margin: 2rem 0rem;
+    }
+    .fashion-nr {
+        font-size: 8rem;
+    }
+    .nav-bar {
+        display: block;
+    }
+    .nav-links {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .contact h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .contact p {
+        font-size: 1.2rem;
+        padding: 2rem;
+        text-align: center;
+    }
 }
